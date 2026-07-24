@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 export function ApproachSection() {
   const steps = [
@@ -34,7 +34,7 @@ export function ApproachSection() {
       description:
         "We help you launch your new brand, website, or video campaign, providing support to ensure maximum impact.",
     },
-  ]
+  ];
 
   return (
     <section className="py-24 px-6 bg-background">
@@ -57,7 +57,8 @@ export function ApproachSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            A proven process that transforms your vision into high-converting digital experiences
+            A proven process that transforms your vision into high-converting
+            digital experiences
           </motion.p>
         </div>
 
@@ -79,7 +80,7 @@ export function ApproachSection() {
                 }`}
               >
                 {/* Step Number Circle */}
-                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-primary text-primary-foreground flex items-center justify-center font-serif text-xl font-bold relative z-10 md:absolute md:left-1/2 md:-translate-x-1/2">
+                <div className="flex-shrink-0 w-16 h-16 rounded-full bg-accent text-accent-foreground flex items-center justify-center font-serif text-xl font-bold relative z-10 md:absolute md:left-1/2 md:-translate-x-1/2">
                   {step.number}
                 </div>
 
@@ -88,8 +89,12 @@ export function ApproachSection() {
                   className={`flex-1 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16 md:text-left"} md:w-1/2`}
                 >
                   <div className="bg-secondary p-8 rounded-2xl border border-border hover:border-primary/50 transition-colors">
-                    <h3 className="font-serif text-2xl md:text-3xl mb-4">{step.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{step.description}</p>
+                    <h3 className="font-serif text-2xl md:text-3xl mb-4">
+                      {step.title}
+                    </h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {step.description}
+                    </p>
                   </div>
                 </div>
 
@@ -101,5 +106,5 @@ export function ApproachSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

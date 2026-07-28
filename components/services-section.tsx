@@ -6,23 +6,23 @@ export function ServicesSection() {
   const services = [
     {
       title: "Website Development",
-      image: "/placeholder.svg?height=400&width=300",
-      overlayImage: "/placeholder.svg?height=400&width=300",
+      image: "/image1.png",
+      overlayImage: "/image2.png",
     },
     {
       title: "Agency Solutions",
-      image: "/placeholder.svg?height=400&width=300",
-      overlayImage: "/placeholder.svg?height=400&width=300",
+      image: "/image2.png",
+      overlayImage: "/image1.png",
     },
     {
       title: "Shopify E-commerce",
-      image: "/placeholder.svg?height=400&width=300",
-      overlayImage: "/placeholder.svg?height=400&width=300",
+      image: "/image3.png",
+      overlayImage: "/image4.png",
     },
     {
       title: "Merch Design",
-      image: "/placeholder.svg?height=400&width=300",
-      overlayImage: "/placeholder.svg?height=400&width=300",
+      image: "/flyer1.jpg",
+      overlayImage: "/flyer2.jpg",
     },
     {
       title: "Videography",
@@ -31,8 +31,8 @@ export function ServicesSection() {
     },
     {
       title: "Rebranding",
-      image: "/placeholder.svg?height=400&width=300",
-      overlayImage: "/placeholder.svg?height=400&width=300",
+      image: "flyer2.jpg",
+      overlayImage: "/flyer1.jpg",
     },
   ]
 

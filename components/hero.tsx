@@ -50,7 +50,7 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="text-center text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed"
         >
-          From stunning websites to custom merch and video—partner with a creative team that's fully invested in your success.
+          From stunning websites to custom merch and video partner with a creative team that's fully invested in your success.
         </motion.p>
 
         {/* CTA Button */}

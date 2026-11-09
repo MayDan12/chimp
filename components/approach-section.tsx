@@ -37,7 +37,7 @@ export function ApproachSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-background" id="process">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-20">

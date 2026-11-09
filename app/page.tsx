@@ -21,9 +21,9 @@ export default function Home() {
       {/* <ClientLogos /> */}
       <StatsSection />
       <ServicesSection />
-      <CaseStudiesSection />
-      {/* <TestimonialsSection /> */}
+      {/* <CaseStudiesSection /> */}
       <ApproachSection />
+      <TestimonialsSection />
       {/* <PricingSection /> */}
       <FAQSection />
       <CTASection />

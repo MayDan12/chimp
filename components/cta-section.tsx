@@ -56,20 +56,24 @@ export function CTASection() {
               transition={{ duration: 0.6, delay: 0.5 }}
               className="flex flex-col sm:flex-row gap-4 justify-center items-center"
             >
-              <Button
-                size="lg"
-                className="rounded-full"
-                leadingIcon={IconArrowRight}
-              >
-                Book a 15-min Call
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="rounded-full bg-transparent"
-              >
-                View Our Work
-              </Button>
+              <a href="#pricing">
+                <Button
+                  size="lg"
+                  className="rounded-full"
+                  leadingIcon={IconArrowRight}
+                >
+                  Book a 15-min Call
+                </Button>
+              </a>
+              <a href="#work">
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="rounded-full bg-transparent"
+                >
+                  View Our Work
+                </Button>
+              </a>
             </motion.div>
 
             <motion.p

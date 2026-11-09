@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function ServicesSection() {
   const services = [
@@ -26,15 +27,15 @@ export function ServicesSection() {
     },
     {
       title: "Videography",
-      image: "/placeholder.svg?height=400&width=300",
-      overlayImage: "/placeholder.svg?height=400&width=300",
+      image: "/image4.png",
+      overlayImage: "/flyer2.jpg",
     },
     {
       title: "Rebranding",
-      image: "flyer2.jpg",
+      image: "/flyer2.jpg",
       overlayImage: "/flyer1.jpg",
     },
-  ]
+  ];
 
   return (
     <section className="py-20 px-4 sm:px-6 w-full bg-background" id="services">
@@ -75,25 +76,35 @@ export function ServicesSection() {
               {/* Image Container */}
               <div className="relative flex-grow flex items-center justify-center mb-6">
                 {/* Back Image */}
-                <img
-                  src={service.image || "/placeholder.svg"}
-                  alt={`${service.title} showcase`}
-                  className="absolute w-44 h-auto rounded-lg shadow-md transform -rotate-6 transition-all duration-400 ease-in-out group-hover:rotate-[-10deg] group-hover:scale-105"
-                />
+                <div className="absolute w-44 aspect-[4/3] rounded-lg shadow-md overflow-hidden transform -rotate-6 transition-all duration-300 ease-in-out group-hover:rotate-[-10deg] group-hover:scale-105">
+                  <Image
+                    src={service.image}
+                    alt={`${service.title} showcase`}
+                    fill
+                    sizes="(max-width: 768px) 176px, 176px"
+                    className="object-cover"
+                  />
+                </div>
                 {/* Front Image */}
-                <img
-                  src={service.overlayImage || "/placeholder.svg"}
-                  alt={`${service.title} example`}
-                  className="absolute w-44 h-auto rounded-lg shadow-lg transform rotate-3 transition-all duration-400 ease-in-out group-hover:rotate-[5deg] group-hover:scale-105"
-                />
+                <div className="absolute w-44 aspect-[4/3] rounded-lg shadow-lg overflow-hidden transform rotate-3 transition-all duration-300 ease-in-out group-hover:rotate-[5deg] group-hover:scale-105">
+                  <Image
+                    src={service.overlayImage}
+                    alt={`${service.title} preview`}
+                    fill
+                    sizes="(max-width: 768px) 176px, 176px"
+                    className="object-cover"
+                  />
+                </div>
               </div>
 
               {/* Service Title */}
-              <h3 className="font-sans text-left text-lg font-medium text-foreground mt-auto">{service.title}</h3>
+              <h3 className="font-sans text-left text-lg font-medium text-foreground mt-auto">
+                {service.title}
+              </h3>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

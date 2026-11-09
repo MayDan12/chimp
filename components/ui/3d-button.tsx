@@ -8,7 +8,7 @@ import { IconLoader2, type TablerIcon } from "@tabler/icons-react"
 
 import { motion, type MotionProps } from "framer-motion"
 
-const TABLER_ICON_STYLE = 14
+const TABLER_ICON_STYLE = { size: 16 }
 const buttonVariants = cva(
   "inline-flex items-center justify-center whitespace-nowrap rounded-xl text-sm font-semibold ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 gap-2 border",
   {

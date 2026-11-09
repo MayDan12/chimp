@@ -60,9 +60,11 @@ export function Hero() {
           transition={{ duration: 0.6, delay: 0.8 }}
           className="flex justify-center"
         >
-          <Button size="lg" className="rounded-full px-8 text-base">
-            Book a 15-min Call 📞
-          </Button>
+          <a href="#pricing">
+            <Button size="lg" className="rounded-full px-8 text-base">
+              Book a 15-min Call 📞
+            </Button>
+          </a>
         </motion.div>
       </div>
     </section>

@@ -40,10 +40,26 @@ export function Footer() {
               </li>
               <li>
                 <Link
+                  href="#work"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Case Studies
+                </Link>
+              </li>
+              <li>
+                <Link
                   href="#process"
                   className="text-muted-foreground hover:text-primary transition-colors"
                 >
                   Process
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#pricing"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                >
+                  Pricing
                 </Link>
               </li>
               <li>

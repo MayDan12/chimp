@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useCallback } from "react"
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { ChevronLeft, ChevronRight, Star, Quote } from "lucide-react"
 import { cn } from "@/lib/utils"
@@ -59,12 +60,12 @@ export const TestimonialSlider = ({ testimonials, className }: TestimonialSlider
     visible: {
       x: "0%",
       opacity: 1,
-      transition: { type: "spring", stiffness: 260, damping: 30 },
+      transition: { type: "spring" as const, stiffness: 260, damping: 30 },
     },
     exit: (direction: number) => ({
       x: direction < 0 ? "100%" : "-100%",
       opacity: 0,
-      transition: { type: "spring", stiffness: 260, damping: 30 },
+      transition: { type: "spring" as const, stiffness: 260, damping: 30 },
     }),
   }
 
@@ -83,11 +84,13 @@ export const TestimonialSlider = ({ testimonials, className }: TestimonialSlider
           >
             <div className="flex flex-col md:flex-row items-center justify-center w-full h-full p-4">
               {/* Image Section */}
-              <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10">
-                <img
-                  src={currentTestimonial.image || "/placeholder.svg"}
+              <div className="relative w-48 h-48 md:w-64 md:h-64 flex-shrink-0 mb-4 md:mb-0 md:mr-[-4rem] z-10 overflow-hidden rounded-2xl shadow-lg bg-muted">
+                <Image
+                  src={currentTestimonial.image || "/placeholder-user.jpg"}
                   alt={currentTestimonial.name}
-                  className="w-full h-full object-cover rounded-2xl shadow-lg"
+                  fill
+                  sizes="(max-width: 768px) 192px, 256px"
+                  className="object-cover"
                 />
               </div>
 

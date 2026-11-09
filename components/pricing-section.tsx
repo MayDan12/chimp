@@ -54,7 +54,7 @@ export function PricingSection() {
   ]
 
   return (
-    <section className="py-24 px-6 bg-secondary">
+    <section className="py-24 px-6 bg-secondary" id="pricing">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2

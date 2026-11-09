@@ -5,7 +5,7 @@ import {
 
 const testimonials: Testimonial[] = [
   {
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/placeholder-user.jpg",
     quote:
       "CHIMP transformed our agency's web presence completely. The conversion-focused design they delivered increased our client inquiries by 85% in just three months. Their attention to detail and understanding of agency needs is unmatched.",
     name: "Sarah Mitchell",
@@ -13,7 +13,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/placeholder-user.jpg",
     quote:
       "Working with CHIMP has been a game-changer for our white-label services. They deliver consistently high-quality work that we're proud to present to our clients. The partnership has allowed us to scale faster than we ever thought possible.",
     name: "James Rodriguez",
@@ -21,7 +21,7 @@ const testimonials: Testimonial[] = [
     rating: 5,
   },
   {
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/placeholder-user.jpg",
     quote:
       "The team at CHIMP doesn't just build websites—they build growth engines. Their strategic approach to conversion optimization has helped us achieve a 3x ROI on our web investment. Highly recommend for any agency looking to scale.",
     name: "Emily Chen",
@@ -32,7 +32,7 @@ const testimonials: Testimonial[] = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-32 px-4 bg-background overflow-visible">
+    <section className="py-32 px-4 bg-background overflow-visible" id="testimonials">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-balance">

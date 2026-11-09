@@ -1,6 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function CaseStudiesSection() {
   const caseStudies = [
@@ -8,34 +9,38 @@ export function CaseStudiesSection() {
       client: "TechFlow",
       project: "Full Rebrand & Shopify Launch",
       metric: "150% increase in sales",
-      description: "A complete brand overhaul coupled with a high-converting Shopify store tailored for their audience.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "A complete brand overhaul coupled with a high-converting Shopify store tailored for their audience.",
+      image: "/image1.png",
     },
     {
       client: "GrowthLab",
       project: "Brand Story Videography",
       metric: "2M+ organic views",
-      description: "Produced a cinematic brand documentary and a suite of short-form video assets for social media.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "Produced a cinematic brand documentary and a suite of short-form video assets for social media.",
+      image: "/image2.png",
     },
     {
       client: "Velocity Digital",
       project: "Custom Merch Line & Storefront",
       metric: "$100k+ in launch week",
-      description: "Designed an exclusive merchandise line and built a custom e-commerce experience to drive sales.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "Designed an exclusive merchandise line and built a custom e-commerce experience to drive sales.",
+      image: "/image3.png",
     },
     {
       client: "Nexus Partners",
       project: "Agency Website Rebuild",
       metric: "200+ qualified leads/month",
-      description: "Strategic redesign focused on lead generation with integrated CRM and automation workflows.",
-      image: "/placeholder.svg?height=400&width=600",
+      description:
+        "Strategic redesign focused on lead generation with integrated CRM and automation workflows.",
+      image: "/image4.png",
     },
-  ]
+  ];
 
   return (
-    <section className="py-24 px-6 bg-background">
+    <section className="py-24 px-6 bg-background" id="work">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
           <motion.h2
@@ -54,7 +59,8 @@ export function CaseStudiesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Real results from agencies we've partnered with to drive growth and conversions.
+            Real results from brands and agencies we&apos;ve partnered with to drive
+            growth and conversions.
           </motion.p>
         </div>
 
@@ -68,23 +74,33 @@ export function CaseStudiesSection() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="group bg-secondary rounded-2xl overflow-hidden border border-border hover:border-primary/50 transition-all duration-300"
             >
-              <div className="aspect-[3/2] overflow-hidden">
-                <img
-                  src={study.image || "/placeholder.svg"}
-                  alt={study.project}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              <div className="relative aspect-[3/2] overflow-hidden bg-muted">
+                <Image
+                  src={study.image}
+                  alt={`${study.client} - ${study.project}`}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-8">
-                <div className="text-sm font-semibold text-primary mb-2">{study.client}</div>
-                <h3 className="font-serif text-2xl font-bold mb-3">{study.project}</h3>
-                <div className="text-3xl font-bold text-primary mb-4">{study.metric}</div>
-                <p className="text-muted-foreground leading-relaxed">{study.description}</p>
+                <div className="text-sm font-semibold text-accent mb-2">
+                  {study.client}
+                </div>
+                <h3 className="font-serif text-2xl font-bold mb-3">
+                  {study.project}
+                </h3>
+                <div className="text-3xl font-bold text-foreground mb-4">
+                  {study.metric}
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  {study.description}
+                </p>
               </div>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

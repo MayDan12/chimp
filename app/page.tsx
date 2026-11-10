@@ -12,6 +12,8 @@ import { FAQSection } from "@/components/faq-section";
 import { CTASection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
+// TODO: Add a "Contact Us" section with a form and contact details, including email, phone number, and social media links.
+
 export default function Home() {
   return (
     <main className="min-h-screen">
